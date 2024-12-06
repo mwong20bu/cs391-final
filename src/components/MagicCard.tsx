@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Magic } from "../magic";
-//import MagicCardChild from "MagicCardChild";
+import MagicCardChild from "./MagicCardChild";
 
 export default function MagicCard() {
     const [cards, setCards] = useState<Magic[]>([]);
@@ -19,6 +19,6 @@ export default function MagicCard() {
     });
 
     return(
-        <MagicCard cards={cards}/>
+        <MagicCardChild data={cards}/>
     )
 }
