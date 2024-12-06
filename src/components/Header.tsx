@@ -6,7 +6,7 @@ const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: white;
+  color: black;
 `;
 
 const Logo = styled.h1`
@@ -19,7 +19,7 @@ const Nav = styled.nav`
   gap: 15px;
 
   a {
-    color: white;
+    color: black;
     text-decoration: none;
     font-size: 18px;
 
@@ -32,7 +32,7 @@ const Nav = styled.nav`
 const Header = () => {
   return (
     <HeaderContainer>
-      <Logo>MyApp</Logo>
+      <Logo>Magic Card</Logo>
       <Nav>
         <a href="#home">Home</a>
         <a href="#about">About</a>
