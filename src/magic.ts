@@ -4,4 +4,7 @@ export interface Magic {
     image:string;
     cmc:number;
     rarity:string;
+    power:string;
+    toughness:string;
+    cardnumber:string;
 }
