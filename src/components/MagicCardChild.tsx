@@ -13,6 +13,7 @@ const AllCharsDiv=styled.div`
 
 //styling div for each individual character
 const SingleCharDiv=styled.div`
+    font: Arial, sans-serif;
     display: flex;
     flex-direction: column;   
     justify-content: center;
@@ -27,18 +28,19 @@ const SingleCharDiv=styled.div`
 `;
 
 export default function MagicCardChild(props : { data:Magic[] } ){
+    
     return (
         <AllCharsDiv >
             {
                 props.data.map((char: Magic) =>
                     <SingleCharDiv key={char.id}>
                         <h1>{char.name}</h1>
-                        <img src={char.image} alt={`image of ${char.name}`} />
+                        <img src={char.imageUrl} alt={`image of ${char.name}`} />
                         <p>Rarity: {char.rarity}</p>
                         <p>Converted mana cost: {char.cmc}</p>
                         <p>Power: {char.power}</p>
                         <p>Toughness: {char.toughness}</p>
-                        <p>Card Number: {char.cardnumber}</p>
+                        <p>Card Number: {char.number}</p>
                     </SingleCharDiv>
                 )
             }
