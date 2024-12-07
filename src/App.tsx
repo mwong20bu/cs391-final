@@ -1,19 +1,28 @@
-import MagicCard from "./components/MagicCard.tsx";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import styled from "styled-components";
-import Header from './components/Header'; {/* Header component */}
+import Header from "./components/Header";
+import About from "./components/About";
+import MagicCard from "./components/MagicCard"; // MagicCard is the landing page
 
-//parent div for the app as a whole, containing all the data displayed from the API 
-const ParentDiv=styled.div`
-    width: 90vw;
-    margin: auto;
-    border: 5px black solid;
+// Styled Parent Div
+const ParentDiv = styled.div`
+  width: 90vw;
+  margin: auto;
+  border: 5px black solid;
 `;
 
-export default function App(){
-    return(
-        <ParentDiv>
-          <Header/>  
-          <MagicCard/>
-        </ParentDiv>
-    )
+export default function App() {
+  return (
+    <Router>
+      <ParentDiv>
+        <Header />
+        <Routes>
+          {/* Route for the home page */}
+          <Route path="/" element={<MagicCard />} />
+          {/* Route for the About page */}
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </ParentDiv>
+    </Router>
+  );
 }

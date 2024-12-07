@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const HeaderContainer = styled.header`
   background-color: #f2f2f2;
@@ -32,11 +33,10 @@ const Nav = styled.nav`
 const Header = () => {
   return (
     <HeaderContainer>
-      <Logo>Magic Card</Logo>
+      <Logo>My App</Logo>
       <Nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
       </Nav>
     </HeaderContainer>
   );
