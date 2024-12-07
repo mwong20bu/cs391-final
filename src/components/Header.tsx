@@ -33,7 +33,7 @@ const Nav = styled.nav`
 const Header = () => {
   return (
     <HeaderContainer>
-      <Logo>My App</Logo>
+      <Logo>Magic Cards</Logo>
       <Nav>
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
