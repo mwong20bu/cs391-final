@@ -1,19 +1,21 @@
+//this file contains the component used for mapping data from api call in MagicCard to 
+//individual cards 
+//written by Madeline Wong
+
 import styled from "styled-components";
 import {Magic} from "../magic";
 
-//child component used for displaying info / UI
-
-//container for the character displays
+//container for the card display
 const AllCharsDiv=styled.div`
     display: flex;
     flex-flow: row wrap;    
     justify-content: space-evenly;
-    background-color: teal;
+    background-color: beige;
 `;
 
-//styling div for each individual character
+//styling div for each individual card
 const SingleCharDiv=styled.div`
-    font: Arial, sans-serif;
+    text-align: center;
     display: flex;
     flex-direction: column;   
     justify-content: center;
@@ -22,17 +24,19 @@ const SingleCharDiv=styled.div`
     margin: 1%;
     background-color: black;
     color: white;
-    border: 'lightgreen 3px solid')};
+    border: white 2px solid;
     font: small-caps bold calc(2px + 1vw) Arial, fantasy;
     text-align: center;
 `;
 
+//function for mapping data from MagicCard.tsx into individual cards and displaying them
 export default function MagicCardChild(props : { data:Magic[] } ){
     
     return (
         <AllCharsDiv >
             {
                 props.data.map((char: Magic) =>
+                    //using the fields, as specified in src/magic.ts, to show information for each card
                     <SingleCharDiv key={char.id}>
                         <h1>{char.name}</h1>
                         <img src={char.imageUrl} alt={`image of ${char.name}`} />
