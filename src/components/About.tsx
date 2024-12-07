@@ -37,6 +37,10 @@ const About = () => {
             own record.
           </li>
           <li>
+            <strong>imageUrl</strong>: The URL to an image of the card. Only exists 
+            if the card has a multiverse id.
+          </li>
+          <li>
             <strong>cmc</strong>: Converted mana cost. Always a number.
           </li>
           <li>
