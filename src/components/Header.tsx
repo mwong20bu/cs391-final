@@ -14,7 +14,7 @@ const HeaderContainer = styled.header`
 
 // Define styling for the logo element
 const Logo = styled.h1`
-  font-size: 24px; // Font size for the logo
+  font-size: 22px; // Font size for the logo
   margin: 0; // Remove default margin
 `;
 
@@ -27,7 +27,7 @@ const Nav = styled.nav`
   a {
     color: black; // Text color for links
     text-decoration: none; // Remove underline from links
-    font-size: 18px; // Font size for links
+    font-size: 22px; // Updated font size for navigation links
 
     // Hover effect for links
     &:hover {
